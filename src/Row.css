@@ -1,0 +1,40 @@
+.row {
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* Tells all browsers to display none to the scrollbar but keep the functionality */
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row__poster {
+    /* This will keep the aspect ratio, regardless if it moves, reshaped and etc. */
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    padding: 5px;
+    transition: transform 450ms;
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+
+}
+
+.row__posterLarge {
+    max-height: 250px;
+}
+
+.row__posterLarge:hover {
+    transform: scale(1.09);
+}
